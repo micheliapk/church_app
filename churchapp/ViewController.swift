@@ -10,17 +10,17 @@ import WebKit
 
 class ViewController: UIViewController, WKNavigationDelegate {
 
-    @IBOutlet weak var webView: WKWebView! 
-
+    @IBOutlet weak var WEBVIEW: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
 
-        webView.navigationDelegate = self
+        WEBVIEW.navigationDelegate = self
 
         if let url = URL(string: "https://stthomas-svale.org/sermons/") {
             let request = URLRequest(url: url)
-            webView.load(request)
+            WEBVIEW.load(request)
         }
     }
 }
